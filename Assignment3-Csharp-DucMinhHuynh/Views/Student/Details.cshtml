@@ -1,0 +1,30 @@
+﻿@model Assignment3_Csharp_DucMinhHuynh.Models.Student
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    .grid-container-Student {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        gap: 1px;
+        border: 1px solid black;
+    }
+
+    .grid-item-Student {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<h2>Details of Student</h2>
+<div class="grid-container-Student">
+    <div class="grid-item-Student">First Name</div>
+    <div class="grid-item-Student">Last Name</div>
+    <div class="grid-item-Student">Enroll Date</div>
+    <div class="grid-item-Student">Student Number</div>
+    <div class="grid-item-Student">@Model.studentFName</div>
+    <div class="grid-item-Student">@Model.studentLName</div>
+    <div class="grid-item-Student">@Model.enrolDate</div>
+    <div class="grid-item-Student">@Model.studentNumber</div>
+</div>
+   

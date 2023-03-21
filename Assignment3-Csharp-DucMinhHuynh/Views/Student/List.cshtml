@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Assignment3_Csharp_DucMinhHuynh.Models.Student>
+@{
+    ViewBag.Title = "List";
+}
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        gap: 1px;
+    }
+
+    .grid-item {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<h2>List Of Student</h2>
+<div class="grid-container">
+    <div class="grid-item">Student Name</div>
+    @foreach (var student in Model)
+    {
+        <div class="grid-item"><a href="./Details?StudentName=@student.studentFName">@student.studentFName @student.studentLName</a></div>
+    }
+</div>
+
+

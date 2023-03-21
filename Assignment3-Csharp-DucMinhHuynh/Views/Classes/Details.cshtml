@@ -1,0 +1,30 @@
+﻿@model Assignment3_Csharp_DucMinhHuynh.Models.Classes
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    .grid-container-Class {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        gap: 1px;
+        border: 1px solid black;
+    }
+
+    .grid-item-Class {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+<h2>Details of Classes</h2>
+<div class="grid-container-Class">
+    <div class="grid-item-Class">Class Name</div>
+    <div class="grid-item-Class">Start Date </div>
+    <div class="grid-item-Class">End Date </div>
+    <div class="grid-item-Class">@Model.classname</div>
+    <div class="grid-item-Class">@Model.startdate</div>
+    <div class="grid-item-Class">@Model.enddate </div>
+
+</div>
+

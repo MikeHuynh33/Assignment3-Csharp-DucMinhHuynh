@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Assignment3_Csharp_DucMinhHuynh.Models.Classes>
+@{
+    ViewBag.Title = "List";
+}
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        gap: 1px;
+        
+    }
+
+    .grid-item{
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<h2>List Of Classes</h2>
+<div class="grid-container" >
+    <div class="grid-item">Class Name</div>
+    @foreach (var classes in Model)
+    {
+        <div class="grid-item">
+            <a href="./Details/@classes.classid">@classes.classname</a>
+        </div>
+    }
+
+</div>
+
